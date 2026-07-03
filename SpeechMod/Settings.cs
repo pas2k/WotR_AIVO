@@ -23,11 +23,8 @@ public class Settings : UnityModManager.ModSettings
     public float SoundDedupTimeout = 4f;
 
     public float AcceleratedPlaybackSpeed = 60f;
-	public float DefaultAcceleratedPlaybackSpeed = 60f;
+	public float DefaultPlaybackSpeed = 0f;
 	
-	public float DefaultPitchCorrection = -1200f;
-	public float AcceleratedPitchCorrection = -1200f;
-
     public override void Save(UnityModManager.ModEntry modEntry)
     {
         Save(this, modEntry);

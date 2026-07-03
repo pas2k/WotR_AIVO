@@ -99,8 +99,7 @@ public static class SettingsUIPatches
                 Debug.Log($"Bank loading {fname}: {bankLoadResult}, bank ID: {bankId}");
                 Main.LoadedBanks.Add(fname);
             }
-            AkSoundEngine.SetRTPCValue("AivoPlaybackSpeed", Main.Settings.DefaultAcceleratedPlaybackSpeed);
-            AkSoundEngine.SetRTPCValue("AivoPitch", Main.Settings.DefaultPitchCorrection);
+            AkSoundEngine.SetRTPCValue("AivoPlaybackSpeed", Main.Settings.DefaultPlaybackSpeed);
         }
         catch (Exception e)
         {

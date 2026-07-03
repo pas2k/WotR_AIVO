@@ -82,28 +82,14 @@ public static class MenuGUI
         Main.Settings.AcceleratedPlaybackSpeed = GUILayout.HorizontalSlider(Main.Settings.AcceleratedPlaybackSpeed, 0, 100);
         // Applied via the "Hold to apply playback speed" hotkey (default ]); see PlaybackSpeedHold / Main.OnUpdate.
         GUILayout.EndHorizontal();
-		
+				
 		GUILayout.BeginHorizontal();
-		GUILayout.Label($"Accelerated pitch correction {Main.Settings.AcceleratedPitchCorrection:F0}", GUILayout.ExpandWidth(false));
-		GUILayout.Space(10);
-		Main.Settings.AcceleratedPitchCorrection =
-			GUILayout.HorizontalSlider(Main.Settings.AcceleratedPitchCorrection, -2400f, 0f);
-		GUILayout.EndHorizontal();
-		
-		GUILayout.BeginHorizontal();
-        GUILayout.Label($"Default Play back speed {Main.Settings.DefaultAcceleratedPlaybackSpeed.ToString("F2")}", GUILayout.ExpandWidth(false));
+        GUILayout.Label($"Default playback speed {Main.Settings.DefaultPlaybackSpeed.ToString("F2")}", GUILayout.ExpandWidth(false));
         GUILayout.Space(10);
-        Main.Settings.DefaultAcceleratedPlaybackSpeed = GUILayout.HorizontalSlider(Main.Settings.DefaultAcceleratedPlaybackSpeed, 0, 100);
+        Main.Settings.DefaultPlaybackSpeed = GUILayout.HorizontalSlider(Main.Settings.DefaultPlaybackSpeed, 0, 100);
         GUILayout.EndHorizontal();
 		
-		GUILayout.BeginHorizontal();
-		GUILayout.Label($"Default pitch correction {Main.Settings.DefaultPitchCorrection:F0}", GUILayout.ExpandWidth(false));
-		GUILayout.Space(10);
-		Main.Settings.DefaultPitchCorrection =
-			GUILayout.HorizontalSlider(Main.Settings.DefaultPitchCorrection, -2400f, 0f);
-		GUILayout.EndHorizontal();
-
-        AddColorPicker("Color on text hover", ref Main.Settings.ColorOnHover, "Hover color", ref Main.Settings.HoverColorR, ref Main.Settings.HoverColorG, ref Main.Settings.HoverColorB, ref Main.Settings.HoverColorA);
+		AddColorPicker("Color on text hover", ref Main.Settings.ColorOnHover, "Hover color", ref Main.Settings.HoverColorR, ref Main.Settings.HoverColorG, ref Main.Settings.HoverColorB, ref Main.Settings.HoverColorA);
 
         GUILayout.BeginVertical("", GUI.skin.box);
 

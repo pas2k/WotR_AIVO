@@ -7,5 +7,5 @@
   "AssemblyName": "WOTR_AIVOMod.dll",
   "EntryMethod": "AiVoiceoverMod.Main.Load",
   "HomePage": "https://www.nexusmods.com/pathfinderwrathoftherighteous/mods/1028",
-  "Version": "0.1.0"
+  "Version": "0.2.0"
 }
